@@ -1,0 +1,59 @@
+header {
+  position: relative;
+  .issue-actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .summary-editor {
+    width: 60%;
+  }
+}
+
+textarea {
+  resize: none;
+  border-color: transparent;
+  border-radius: 5px;
+  &:hover {
+    background: #f1f1f1;
+  }
+}
+
+div[mat-dialog-content] {
+  display: flex;
+  h4 {
+    padding: 0 5px;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+}
+
+section {
+  display: inline-block;
+  width: 60%;
+  .description-editor {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    padding: 5px;
+    font-size: 14px;
+    line-height: 20px;
+    width: 100%;
+  }
+}
+aside {
+  display: inline-block;
+  text-align: center;
+  width: 40%;
+}
+
+@media screen and (max-width: 800px) {
+  div[mat-dialog-content] {
+    display: block;
+    section, aside {
+      width: 100%;
+    }
+  }
+  .summary-editor {
+    width: 100%;
+    padding-top: 40px;
+  }
+}

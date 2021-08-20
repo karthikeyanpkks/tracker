@@ -1,0 +1,41 @@
+﻿namespace Common.Utilities
+{
+    public enum AppCollections
+    {
+        User,
+        ContactUs,
+        Email,
+        Customer,
+        EmailMaster,
+        Roles,
+        City,
+        State,
+        Country,
+        Company,
+
+        Warehouse,
+        CompanyCategory,
+        Screens,
+        UOM,
+        ProductCategory,
+        Product,
+        ProductType,
+        Job,
+        Supplier,
+        SupplierProduct,
+        PurchaseOrder,
+        GoodsReceive,
+        GoodsReceiveDetail,
+        Stored,
+        Attendance,
+        Quotation,
+        CustomerType,
+        Application,
+        Tracker,
+        SubProduct,
+        Events,
+        OralQuotation,
+        SupplierCategory,
+        OrderConfirmType
+    }
+}

@@ -1,0 +1,25 @@
+mat-card {
+    margin: 4px 2px;
+    padding: 8px;
+    mat-card-content {
+        margin: 0;
+    }
+    &:hover {
+        background: #ebecf0;
+    }
+    mat-icon {
+        padding: 0.5rem;
+        &.critical {
+            color: orangered;
+        }
+        &.high {
+            color: #e91e63;
+        }
+        &.medium {
+            color: dodgerblue;
+        }
+        &.low {
+            color: #26a926;
+        }
+    }
+}

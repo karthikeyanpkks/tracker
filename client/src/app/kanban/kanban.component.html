@@ -1,0 +1,16 @@
+<div class="kanban-container">
+  <div class="kanban-board" cdkDropListGroup>
+    <div
+      class="lane"
+      *ngFor="let lane of lanes"
+      cdkDropList
+      [id]="lane?.id"
+      [cdkDropListData]="lane?.issues"
+      (cdkDropListDropped)="drop($event)">
+      <h3>{{ lane?.name }}</h3>
+      <div *ngFor="let issue of lane.issues">
+        <app-issue-card [issue]="issue" cdkDrag [cdkDragData]="issue" (click)="viewIssue(issue)"></app-issue-card>
+      </div>
+    </div>
+  </div>
+</div>

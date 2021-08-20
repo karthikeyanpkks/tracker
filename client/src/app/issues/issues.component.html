@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="issue-options">
+    <div class="issues-view">
+      <mat-button-toggle-group value="kanban" #group="matButtonToggleGroup">
+        <mat-button-toggle value="kanban"> Kanban </mat-button-toggle>
+        <mat-button-toggle value="list"> List </mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+    <div class="filter-options"></div>
+    <div class="actions">
+      <button
+        class="create-issue"
+        color="accent"
+        mat-flat-button
+        (click)="createIssue()"
+      >
+        Create Issue
+      </button>
+    </div>
+  </div>
+
+  <app-issue-list *ngIf="group.value === 'list'"></app-issue-list>
+
+  <app-kanban *ngIf="group.value === 'kanban'"></app-kanban>
+</div>

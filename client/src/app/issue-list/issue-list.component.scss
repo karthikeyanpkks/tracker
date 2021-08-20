@@ -1,0 +1,48 @@
+table {
+  width: 100%;
+  .mat-column-id,
+  .mat-column-lastUpdated,
+  .mat-column-createdAt,
+  .mat-column-status,
+  .mat-column-priority {
+    width: 12vw;
+    max-width: 12vw;
+    padding: 0 10px;
+    cursor: pointer;
+  }
+
+  .mat-column-summary {
+    width: 30vw;
+    max-width: 30vw;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 0 10px;
+    cursor: pointer;
+  }
+
+  .mat-column-priority {
+    p {
+      margin: 0;
+      border-radius: 5px;
+      color: white;
+      text-align: center;
+
+      &.critical {
+        background: orangered;
+      }
+      &.high {
+        background: #e91e63;
+      }
+      &.medium {
+        background: dodgerblue;
+      }
+      &.low {
+        background: #26a926;
+      }
+    }
+  }
+  [mat-row]:hover {
+    background: #ebecf0;
+  }
+}

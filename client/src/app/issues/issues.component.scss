@@ -1,0 +1,10 @@
+.container {
+  padding: 0.5rem;
+  .issue-options {
+    display: flex;
+    align-items: center;
+    .filter-options {
+      flex: 1;
+    }
+  }
+}
