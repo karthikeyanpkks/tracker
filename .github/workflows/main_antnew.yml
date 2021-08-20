@@ -24,16 +24,16 @@ jobs:
 
     - name: Build with dotnet
       run: dotnet build --configuration Release
-      working-directory: ${{env.DOTNET_ROOT}}/tracker/server/Ant-Tracker.sln
+      working-directory: tracker/server/Ant-Tracker.sln
 
     - name: dotnet publish
-      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/server/Tracker/Tracker.csproj
+      run: dotnet publish -c Release -o server/Tracker/Tracker.csproj
 
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v2
       with:
         name: .net-app
-        path: ${{env.DOTNET_ROOT}}/server/Tracker/Tracker.csproj
+        path: ${{env.DOTNET_ROOT}}/Tracker
 
   deploy:
     runs-on: windows-latest
